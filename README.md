@@ -13,6 +13,8 @@ proposal with a test plan.
 | 03 | A/B test re-analysis (Cookie Cats) | SRM check, hypothesis tests, power | In progress |
 | 04 | Feature proposal | Problem framing, design, test plan | Not started |
 
+Metric definitions used throughout the projects: [Metric glossary](00_metric_glossary.md)
+
 ## Tools
 SQL (BigQuery), Python (pandas, SciPy), Power BI, Excel
 
