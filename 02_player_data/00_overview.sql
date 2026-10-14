@@ -20,3 +20,28 @@ SELECT
 FROM `firebase-public-project.analytics_153293282.events_*`
 GROUP BY event_name
 ORDER BY 2 DESC;
+
+-- Query 3: Average daily active users (DAU)
+-- Result: about 518 players on an average day
+WITH daily_active_users AS (
+  SELECT
+    event_date,
+    COUNT(DISTINCT user_pseudo_id) AS daily_users
+  FROM `firebase-public-project.analytics_153293282.events_*`
+  GROUP BY event_date
+)
+SELECT ROUND(AVG(daily_users)) AS avg_dau
+FROM daily_active_users;
+
+-- Query 4: Monthly active users (MAU) and how many days of each month the data covers
+-- Result: July 5,103, August 4,667, September 6,065. June (19 days) and October (3 days)
+-- are only partly covered, so they aren't comparable with full months.
+-- Stickiness (DAU/MAU) is roughly 518 / 5,280 = about 10%, so a typical monthly player
+-- opens the game on about 3 days a month.
+SELECT
+  SUBSTR(event_date, 1, 6) AS month,
+  COUNT(DISTINCT user_pseudo_id) AS mau,
+  COUNT(DISTINCT event_date) AS days_in_data
+FROM `firebase-public-project.analytics_153293282.events_*`
+GROUP BY month
+ORDER BY month;
