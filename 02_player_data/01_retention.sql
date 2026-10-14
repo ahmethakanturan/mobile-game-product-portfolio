@@ -35,6 +35,6 @@ select d_results.*, d1_players/d1_cohort as d1_retention, d7_players/d7_cohort a
 -- About 4 in 5 new players don't come back the next day, and only 5.5% are still playing a week
 -- later. D7 is about a quarter of D1, so most of the players who return on day 1 are gone by day 7.
 -- Retention shows that players leave, not why. One lead from the overview: about 42% of finished
--- quickplay levels end in a fail, and about 44% of players who start quickplay never win a level.
--- If the early levels are too hard, that could explain part of the drop. I check this next with
--- a level funnel.
+-- quickplay games end in a fail, and about 44% of players who start quickplay never win a game.
+-- If the early games are too hard, that could explain part of the drop. I look at this in
+-- 02_board_difficulty.sql.
