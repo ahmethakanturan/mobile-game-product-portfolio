@@ -1,6 +1,6 @@
 # Metric glossary
 
-The main metrics I use in this portfolio. Where I could, I used real numbers from the Flood-It and Cookie Cats data or from my own Magic Sort playthrough.
+The main metrics I use in this portfolio. Where I could, I used real numbers from the Flood-It and Cookie Cats data or from games I played myself.
 
 ## Keeping players
 
@@ -10,7 +10,7 @@ The share of players who come back a certain number of days after they install t
 
 Formula: players from an install group who are active on day N / all players in that group
 
-Example: In Cookie Cats, 44.5% of players came back on day 1 and only 18.6% on day 7. More than half of the players who returned on day 1 were gone within a week. D30 will be calculated on Flood-It in project 02.
+Example: In Flood-It, 21.5% of new players came back on day 1 and 5.5% on day 7. In Cookie Cats it was 44.5% and 18.6%. The two games come from different years and count days differently, so comparing them directly isn't fair. In both, though, more than half of the players who came back on day 1 were gone by day 7.
 
 Why it matters: A player who leaves can't spend money or watch ads, so every other metric depends on retention. Each day tells you something different. D1 shows if the first session worked, D7 shows if the core loop keeps people interested and D30 shows if there is enough to do in the long run.
 
@@ -20,7 +20,7 @@ The share of players who stop playing. Players don't announce that they are leav
 
 Formula: players who became inactive in a period / players who were active at the start of that period
 
-Example: In Flood-It, 2,635 of 15,175 players uninstalled the game, about 17%. Real churn is higher because most players who quit just leave the game on their phone, and uninstalls are only tracked on Android. I will measure churn by inactivity in project 02.
+Example: In Flood-It, 2,635 of 15,175 players uninstalled the game, about 17%. Real churn is higher because most players who quit just leave the game on their phone, and uninstalls are only tracked on Android.
 
 Why it matters: Keeping a player is much cheaper than finding a new one. Knowing when and where players quit shows what to fix first.
 
@@ -62,7 +62,7 @@ A session is one visit, from opening the game to leaving it. Session length is h
 
 Formula: sessions per player = total sessions / players. Average session length = total time played / total sessions
 
-Example: In Flood-It, 12,261 players started 74,353 sessions, about 6 sessions per player over the whole period. I will calculate session length in project 02.
+Example: In Flood-It, 12,261 players started 74,353 sessions, about 6 sessions per player over the whole period.
 
 Why it matters: Casual puzzle games are built for short visits many times a day. A drop in sessions or session length is often an early warning that shows up before retention falls.
 
@@ -124,7 +124,7 @@ Running the game as a live service after launch. This means time limited events,
 
 How it's measured: how many players join an event, and how retention and revenue during events compare to normal days
 
-Example: I will fill this in from my 14 day Magic Sort log in project 01.
+Example: In Search It, a Mushroom Hunt event opens after level 6. It runs over 15 levels, and its rewards go from 10 coins up to 2 magnifiers.
 
 Why it matters: Events give players a new reason to come back without building new levels from scratch. Top puzzle games earn a large part of their revenue during events.
 
@@ -146,8 +146,6 @@ How much the game earns per active player per day, from both purchases and ads.
 
 Formula: daily revenue / DAU
 
-Example: I will calculate this on Flood-It in project 02, since purchase events include a revenue value.
-
 Why it matters: It lets you compare how well the game earns across days, countries or versions, no matter how many players there are.
 
 ### ARPPU (average revenue per paying user)
@@ -156,8 +154,6 @@ How much each paying player spends on average.
 
 Formula: revenue / paying players
 
-Example: I will calculate this on Flood-It in project 02.
-
 Why it matters: Together with payer rate it explains revenue. Revenue = active players × payer rate × ARPPU. The same revenue can come from many small buyers or a few big ones, and those need different fixes.
 
 ### LTV (lifetime value)
@@ -165,8 +161,6 @@ Why it matters: Together with payer rate it explains revenue. Revenue = active p
 The total revenue one player is expected to bring over their whole time in the game.
 
 Formula: a simple estimate is ARPDAU × the average number of days a player stays. Teams usually track total revenue per install group over time, for example at day 7, 30 and 90.
-
-Example: I will estimate this on Flood-It in project 02 if the revenue data allows it.
 
 Why it matters: It tells the company how much it can pay to get a new player. If LTV is higher than the cost of an install, buying users is profitable.
 
@@ -184,7 +178,7 @@ Why it matters: Comparing before and after an update mixes in other things like 
 
 If the change really had no effect, the p-value is the chance of seeing a difference this big just by luck. A small p-value, usually below 0.05, means luck is an unlikely explanation.
 
-Example: I will calculate it on Cookie Cats in project 03.
+Example: In Cookie Cats, the D7 retention gap between the groups had p = 0.0016, so luck is an unlikely explanation. The D1 gap had p = 0.074, so it could still be chance.
 
 Why it matters: It tells you if a difference is likely to be real. It does not tell you how big or how important the difference is. With 90,000 players even a tiny difference can get a small p-value, so you always look at the size of the difference too.
 
@@ -192,7 +186,7 @@ Why it matters: It tells you if a difference is likely to be real. It does not t
 
 The smallest difference a test can reliably catch with its number of players.
 
-Example: I will calculate it for the Cookie Cats sample size in project 03.
+Example: Cookie Cats had about 45,000 players per group. At the usual settings (5% significance, 80% power), the MDE is about 0.7 percentage points for D7 and 0.9 points for D1. The real D7 gap was 0.8 points, just above the MDE. The D1 gap was 0.6 points, below it, so the test was too small to reliably catch a D1 effect of that size.
 
 Why it matters: It tells you how many players and how much time a test needs before you start. It also matters after the test. If a test finds no difference, that doesn't prove the change has no effect. The test may have been too small to see it.
 
@@ -200,6 +194,6 @@ Why it matters: It tells you how many players and how much time a test needs bef
 
 When the sizes of the test groups are further from the planned split than luck can explain.
 
-Example: Cookie Cats has 44,700 players in gate_30 and 45,489 in gate_40 instead of an even 50/50 split. I will test if this is a real mismatch in project 03.
+Example: Cookie Cats has 44,700 players in gate_30 and 45,489 in gate_40 instead of an even 50/50 split. A chi-square test gives p = 0.0086. That is below 0.05 but above the stricter 0.001 cutoff many teams use for this check, so I called it borderline.
 
 Why it matters: A mismatch usually means something broke in how players were assigned or tracked. Then the groups may no longer contain the same kind of players, and you can't trust any result from the test. That's why it is the first thing to check.
