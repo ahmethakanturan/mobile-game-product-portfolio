@@ -8,15 +8,21 @@ proposal with a test plan.
 
 | # | Project | What it shows | Status |
 |---|---------|---------------|--------|
-| 01 | Game teardown: Magic Sort | FTUE, core loop, monetization, LiveOps | In progress |
-| 02 | Player data analysis (Flood-It!) | Retention cohorts, level funnel, churn | In progress |
-| 03 | A/B test re-analysis (Cookie Cats) | SRM check, hypothesis tests, power | In progress |
+| 01 | Game teardown: Search It | FTUE, core loop, monetization, LiveOps | In progress |
+| 02 | [Player data analysis (Flood-It!)](02_player_data/) | Retention, difficulty by board, what players do when they run out of moves | Done |
+| 03 | [A/B test re-analysis (Cookie Cats)](03_ab_test/) | SRM check, z-tests, a ship decision | Done |
 | 04 | Feature proposal | Problem framing, design, test plan | Not started |
 
 Metric definitions used throughout the projects: [Metric glossary](00_metric_glossary.md)
 
+## Highlights
+
+- In Flood-It!, only 21.5% of new players come back on day 1 and 5.5% on day 7. Even the easiest board loses more than a third of finished games.
+- Running out of moves is the main trigger for rewarded ads in Flood-It!, but 3 in 4 players who hit that moment neither watch an ad nor pay.
+- In the Cookie Cats test, moving the first gate from level 30 to 40 lowered D7 retention from 19.0% to 18.2% (p = 0.0016). I'd keep the gate at 30.
+
 ## Tools
-SQL (BigQuery), Python (pandas, SciPy), Power BI, Excel
+SQL (BigQuery), Python (pandas, SciPy, statsmodels), Power BI, Excel
 
 ## Data
 - Flood-It! sample dataset: Google's public, obfuscated Firebase/GA4 export
