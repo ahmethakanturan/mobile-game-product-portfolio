@@ -20,7 +20,7 @@ Metric definitions used throughout the projects: [Metric glossary](00_metric_glo
 - In Flood-It!, only 21.5% of new players come back on day 1 and 5.5% on day 7. Even the easiest board loses more than a third of finished games.
 - Running out of moves is the main trigger for rewarded ads in Flood-It!, but 3 in 4 players who hit that moment neither watch an ad nor pay.
 - In the Cookie Cats test, moving the first gate from level 30 to 40 lowered D7 retention from 19.0% to 18.2% (p = 0.0016). I'd keep the gate at 30.
-
+- In Search It, I watched rewarded ads for boosters on the last objects of a level, but never for the x3 coin offer. The game doesn't show what coins are worth, so my feature proposal makes that visible and tests it.
 ## Tools
 SQL (BigQuery), Python (pandas, SciPy, statsmodels), Power BI, Excel
 
